@@ -1,0 +1,58 @@
+import { Category } from '@/types'
+
+export const categories: Category[] = [
+  {
+    id: 'vanities',
+    name: 'Vanities',
+    slug: 'vanities',
+    description: 'Elegant bathroom vanities crafted with precision and designed to elevate your space with timeless sophistication.',
+    image: '/images/categories/vanities.jpg',
+    productCount: 24,
+    featured: true,
+  },
+  {
+    id: 'led-mirrors',
+    name: 'LED Mirrors',
+    slug: 'led-mirrors',
+    description: 'Illuminated mirrors that blend cutting-edge technology with refined design, bringing clarity and ambiance to modern bathrooms.',
+    image: '/images/categories/led-mirrors.jpg',
+    productCount: 18,
+    featured: true,
+  },
+  {
+    id: 'led-medicine-cabinets',
+    name: 'LED Medicine Cabinets',
+    slug: 'led-medicine-cabinets',
+    description: 'Sophisticated storage solutions with integrated lighting, combining functionality with architectural beauty.',
+    image: '/images/categories/medicine-cabinets.jpg',
+    productCount: 12,
+    featured: true,
+  },
+  {
+    id: 'closets',
+    name: 'Closets',
+    slug: 'closets',
+    description: 'Custom closet systems designed for organization and elegance, transforming storage into a luxury experience.',
+    image: '/images/categories/closets.jpg',
+    productCount: 15,
+    featured: false,
+  },
+  {
+    id: 'faucets',
+    name: 'Faucets',
+    slug: 'faucets',
+    description: 'Premium faucets engineered for performance and crafted with meticulous attention to form and finish.',
+    image: '/images/categories/faucets.jpg',
+    productCount: 32,
+    featured: true,
+  },
+  {
+    id: 'accessories',
+    name: 'Accessories',
+    slug: 'accessories',
+    description: 'Refined finishing touches that complete your space with understated luxury and thoughtful detail.',
+    image: '/images/categories/accessories.jpg',
+    productCount: 45,
+    featured: false,
+  },
+]
