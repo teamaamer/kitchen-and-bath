@@ -19,7 +19,11 @@ export default function CategoryCard({ category }: CategoryCardProps) {
         transition={{ duration: 0.3 }}
       >
         <div className="aspect-[4/5] relative overflow-hidden">
-          <div className="w-full h-full bg-stone-gray" />
+          <img 
+            src={category.image} 
+            alt={category.name}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          />
           <div className="absolute inset-0 bg-charcoal opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
         </div>
         <div className="p-6">

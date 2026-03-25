@@ -13,7 +13,13 @@ export default function BrandPhilosophy() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="aspect-[4/5] bg-stone-gray" />
+            <div className="aspect-[4/5] overflow-hidden rounded-lg">
+              <img 
+                src="/brand-philosophy-image.png" 
+                alt="KBS Brand Philosophy - Premium kitchen and bath fixtures showcasing luxury design and craftsmanship"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </motion.div>
           
           <motion.div

@@ -1,32 +1,17 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import { mainNavigation } from '@/data/navigation'
-import { cn } from '@/lib/utils'
 import Button from './ui/Button'
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null)
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
   return (
-    <header
-      className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        isScrolled ? 'bg-luxury-white shadow-md' : 'bg-transparent'
-      )}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 bg-luxury-white shadow-md">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center space-x-3">
@@ -50,10 +35,7 @@ export default function Header() {
               >
                 <Link
                   href={link.href}
-                  className={cn(
-                    'text-charcoal hover:text-brand-green transition-colors duration-200 flex items-center gap-1',
-                    'font-medium text-sm tracking-wide'
-                  )}
+                  className="text-charcoal hover:text-brand-green transition-colors duration-200 flex items-center gap-1 font-medium text-sm tracking-wide"
                 >
                   {link.label}
                   {link.submenu && <ChevronDown className="w-4 h-4" />}

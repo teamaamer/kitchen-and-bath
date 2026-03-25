@@ -6,9 +6,27 @@ import Button from '@/components/ui/Button'
 
 export default function HeroSection() {
   return (
-    <section className="relative h-screen flex items-center justify-center bg-charcoal overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-charcoal/50 to-charcoal/80 z-10" />
+    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* Video Background */}
+      <div className="absolute inset-0 z-0">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+          poster="/luxury-hero-video.jpg" // Fallback image
+        >
+          <source src="/luxury-hero-video.mp4" type="video/mp4" />
+          {/* Fallback for browsers that don't support video */}
+          <div className="w-full h-full bg-charcoal" />
+        </video>
+      </div>
       
+      {/* Dark Overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/50 to-charcoal/80 z-10" />
+      
+      {/* Content */}
       <div className="container mx-auto px-4 lg:px-8 relative z-20 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -36,6 +54,7 @@ export default function HeroSection() {
         </motion.div>
       </div>
 
+      {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
         <motion.div
           animate={{ y: [0, 10, 0] }}
