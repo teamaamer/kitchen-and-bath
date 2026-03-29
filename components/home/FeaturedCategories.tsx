@@ -12,12 +12,12 @@ export default function FeaturedCategories() {
     <section className="py-24 bg-warm-ivory">
       <div className="container mx-auto px-4 lg:px-8">
         <SectionIntro
-          label="Discover"
-          title="Explore Our Collections"
-          description="From vanities to lighting, each category represents our commitment to exceptional design and craftsmanship."
+          label="Our Products"
+          title="Browse Our Product Categories"
+          description="Explore our comprehensive range of kitchen and bath solutions—from custom cabinetry and premium countertops to elegant vanities and innovative LED lighting systems."
         />
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
           {featuredCategories.map((category, index) => (
             <motion.div
               key={category.id}

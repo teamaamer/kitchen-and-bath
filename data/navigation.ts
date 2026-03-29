@@ -10,29 +10,28 @@ export const mainNavigation: NavLink[] = [
     href: '/about',
   },
   {
-    label: 'Shop',
+    label: 'Products',
     href: '/categories',
     submenu: [
-      { label: 'All Categories', href: '/categories' },
+      { label: 'Framed Kitchen Cabinets', href: '/categories/framed-kitchen-cabinets' },
+      { label: 'Flat-Door Kitchen Cabinets', href: '/categories/flat-door-kitchen-cabinets' },
+      { label: 'Countertops', href: '/categories/countertops' },
       { label: 'Vanities', href: '/categories/vanities' },
       { label: 'LED Mirrors', href: '/categories/led-mirrors' },
       { label: 'LED Medicine Cabinets', href: '/categories/led-medicine-cabinets' },
-      { label: 'Closets', href: '/categories/closets' },
-      { label: 'Faucets', href: '/categories/faucets' },
-      { label: 'Accessories', href: '/categories/accessories' },
     ],
   },
   {
-    label: 'Collections',
-    href: '/collections',
+    label: 'Brands',
+    href: '/brands',
   },
   {
     label: 'Inspiration',
     href: '/inspiration',
   },
   {
-    label: 'FAQ',
-    href: '/faq',
+    label: 'Offers',
+    href: '/offers',
   },
   {
     label: 'Contact',
@@ -41,24 +40,25 @@ export const mainNavigation: NavLink[] = [
 ]
 
 export const footerLinks = {
-  shop: [
+  products: [
+    { label: 'Framed Kitchen Cabinets', href: '/categories/framed-kitchen-cabinets' },
+    { label: 'Flat-Door Kitchen Cabinets', href: '/categories/flat-door-kitchen-cabinets' },
+    { label: 'Countertops', href: '/categories/countertops' },
     { label: 'Vanities', href: '/categories/vanities' },
     { label: 'LED Mirrors', href: '/categories/led-mirrors' },
     { label: 'LED Medicine Cabinets', href: '/categories/led-medicine-cabinets' },
-    { label: 'Closets', href: '/categories/closets' },
-    { label: 'Faucets', href: '/categories/faucets' },
-    { label: 'Accessories', href: '/categories/accessories' },
   ],
   company: [
     { label: 'About Us', href: '/about' },
-    { label: 'Collections', href: '/collections' },
+    { label: 'Brands', href: '/brands' },
     { label: 'Inspiration', href: '/inspiration' },
+    { label: 'Special Offers', href: '/offers' },
     { label: 'Contact', href: '/contact' },
   ],
   support: [
-    { label: 'FAQ', href: '/faq' },
     { label: 'Request Quote', href: '/quote' },
-    { label: 'Shipping & Returns', href: '/faq#shipping' },
-    { label: 'Warranty', href: '/faq#warranty' },
+    { label: 'Design Consultation', href: '/contact#consultation' },
+    { label: 'Installation Support', href: '/contact#installation' },
+    { label: 'Warranty Information', href: '/about#warranty' },
   ],
 }

@@ -48,16 +48,6 @@ export default function CategoryPage({ params }: { params: Promise<{ slug: strin
 
       <section className="py-12 bg-warm-ivory">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="flex justify-between items-center mb-8">
-            <p className="text-muted-taupe">
-              Showing {categoryProducts.length} {categoryProducts.length === 1 ? 'product' : 'products'}
-            </p>
-            <button className="flex items-center gap-2 text-charcoal hover:text-brand-green transition-colors">
-              <SlidersHorizontal className="w-5 h-5" />
-              <span className="font-medium">Filter & Sort</span>
-            </button>
-          </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {categoryProducts.map((product, index) => (
               <motion.div

@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import SectionIntro from '@/components/SectionIntro'
 import { Award, Target, Heart, Users } from 'lucide-react'
 
@@ -28,14 +29,6 @@ export default function AboutPage() {
     },
   ]
 
-  const timeline = [
-    { year: '2008', event: 'KBS Founded', description: 'Started with a vision to elevate bathroom design' },
-    { year: '2012', event: 'First Showroom', description: 'Opened our flagship showroom in the design district' },
-    { year: '2016', event: 'LED Innovation', description: 'Launched our signature LED mirror collection' },
-    { year: '2020', event: 'National Expansion', description: 'Expanded to serve clients nationwide' },
-    { year: '2024', event: 'Sustainability Initiative', description: 'Committed to eco-friendly manufacturing practices' },
-  ]
-
   return (
     <div className="pt-20">
       <section className="py-24 bg-charcoal text-luxury-white">
@@ -50,7 +43,7 @@ export default function AboutPage() {
               Crafting Spaces of Distinction
             </h1>
             <p className="text-stone-gray text-xl leading-relaxed">
-              For over 15 years, KBS has been at the forefront of luxury kitchen and bath design, creating products that blend timeless elegance with modern innovation.
+              KBS has been at the forefront of luxury kitchen and bath design, creating products that blend timeless elegance with modern innovation.
             </p>
           </motion.div>
         </div>
@@ -65,7 +58,16 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="aspect-[4/5] bg-stone-gray" />
+              <div className="aspect-[4/3] relative overflow-hidden bg-stone-gray/10">
+                <Image
+                  src="/Aboutus.png"
+                  alt="KBS Showroom Interior"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
+                />
+              </div>
             </motion.div>
             
             <motion.div
@@ -97,6 +99,64 @@ export default function AboutPage() {
       <section className="py-24 bg-luxury-white">
         <div className="container mx-auto px-4 lg:px-8">
           <SectionIntro
+            label="Visit Us"
+            title="Inside Our Showroom"
+            description="Experience our curated collection of kitchen and bath products in person."
+          />
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="aspect-[4/3] relative overflow-hidden bg-stone-gray/10"
+            >
+              <Image
+                src="/showroom/WhatsApp Image 2026-03-25 at 16.40.39.jpeg"
+                alt="KBS Showroom Display 1"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-500"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="aspect-[4/3] relative overflow-hidden bg-stone-gray/10"
+            >
+              <Image
+                src="/showroom/WhatsApp Image 2026-03-25 at 16.40.39 (1).jpeg"
+                alt="KBS Showroom Display 2"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-500"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="aspect-[4/3] relative overflow-hidden bg-stone-gray/10"
+            >
+              <Image
+                src="/showroom/WhatsApp Image 2026-03-25 at 16.40.40.jpeg"
+                alt="KBS Showroom Display 3"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-500"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-warm-ivory">
+        <div className="container mx-auto px-4 lg:px-8">
+          <SectionIntro
             label="Our Values"
             title="What Drives Us"
             description="The principles that guide everything we do."
@@ -117,38 +177,6 @@ export default function AboutPage() {
                 </div>
                 <h3 className="font-heading text-2xl text-charcoal mb-3">{value.title}</h3>
                 <p className="text-muted-taupe leading-relaxed">{value.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 bg-warm-ivory">
-        <div className="container mx-auto px-4 lg:px-8">
-          <SectionIntro
-            label="Our Journey"
-            title="Milestones"
-            description="Key moments that have shaped KBS into what it is today."
-          />
-          
-          <div className="max-w-4xl mx-auto mt-16">
-            {timeline.map((item, index) => (
-              <motion.div
-                key={item.year}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex gap-8 mb-12 last:mb-0"
-              >
-                <div className="flex-shrink-0 w-24">
-                  <p className="font-heading text-3xl text-brand-green">{item.year}</p>
-                </div>
-                <div className="flex-1 pb-12 border-l-2 border-stone-gray pl-8 relative">
-                  <div className="absolute left-0 top-2 w-4 h-4 bg-brand-green rounded-full transform -translate-x-[9px]" />
-                  <h3 className="font-heading text-2xl text-charcoal mb-2">{item.event}</h3>
-                  <p className="text-muted-taupe">{item.description}</p>
-                </div>
               </motion.div>
             ))}
           </div>

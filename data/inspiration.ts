@@ -23,13 +23,6 @@ export const inspirationGallery: InspirationItem[] = [
     products: ['cascade-faucet', 'towel-bar-set'],
   },
   {
-    id: '4',
-    title: 'Luxury Walk-In Closet',
-    image: '/images/inspiration/closet.jpg',
-    tags: ['Closet', 'Storage', 'Luxury'],
-    products: ['meridian-closet'],
-  },
-  {
     id: '5',
     title: 'Spa-Inspired Master Bath',
     image: '/images/inspiration/spa-bath.jpg',

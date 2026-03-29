@@ -4,8 +4,6 @@ export interface Product {
   slug: string
   category: string
   categorySlug: string
-  price?: number
-  priceOnRequest?: boolean
   description: string
   shortDescription: string
   features: string[]
@@ -14,11 +12,9 @@ export interface Product {
     value: string
   }[]
   images: string[]
-  badge?: 'New' | 'Signature' | 'Best Seller'
   finishes?: string[]
   sizes?: string[]
   sku: string
-  inStock: boolean
   relatedProducts?: string[]
 }
 
@@ -28,7 +24,6 @@ export interface Category {
   slug: string
   description: string
   image: string
-  productCount: number
   featured?: boolean
 }
 

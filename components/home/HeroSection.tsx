@@ -24,30 +24,31 @@ export default function HeroSection() {
       </div>
       
       {/* Dark Overlay for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/50 to-charcoal/80 z-10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-charcoal/75 via-charcoal/60 to-charcoal/85 z-10" />
       
       {/* Content */}
-      <div className="container mx-auto px-4 lg:px-8 relative z-20 text-center">
+      <div className="container mx-auto px-4 lg:px-8 relative z-20 text-center flex items-center justify-center min-h-screen pt-32 pb-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+          className="max-w-5xl"
         >
-          <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl text-luxury-white mb-6">
-            Elevated Essentials for<br />Modern Living
+          <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl text-luxury-white mb-8 leading-tight">
+            Custom Kitchen & Bath<br />Solutions
           </h1>
-          <p className="text-stone-gray text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
-            Crafted for interiors that demand both performance and refinement. Discover our collection of luxury kitchen and bath fixtures.
+          <p className="text-stone-gray text-lg md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
+            From framed and flat-door cabinetry to premium countertops, vanities, and LED lighting—we bring your vision to life with exceptional craftsmanship and personalized service.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/categories">
               <Button variant="primary" size="lg">
-                Explore Collection
+                Browse Products
               </Button>
             </Link>
             <Link href="/quote">
               <Button variant="secondary" size="lg" className="border-luxury-white text-luxury-white hover:bg-luxury-white hover:text-charcoal">
-                Request Consultation
+                Request Quote
               </Button>
             </Link>
           </div>

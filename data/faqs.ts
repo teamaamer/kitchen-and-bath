@@ -10,7 +10,7 @@ export const faqs: FAQ[] = [
   {
     id: '2',
     question: 'Do you offer custom sizing?',
-    answer: 'Yes, many of our products can be customized to fit your specific space requirements. Our vanities, closet systems, and select mirrors are available in custom dimensions. Contact us to discuss your project needs.',
+    answer: 'Yes, many of our products can be customized to fit your specific space requirements. Our vanities, cabinets, and select mirrors are available in custom dimensions. Contact us to discuss your project needs.',
     category: 'Orders',
   },
   {
@@ -52,7 +52,7 @@ export const faqs: FAQ[] = [
   {
     id: '9',
     question: 'Do you offer professional installation?',
-    answer: 'We can recommend qualified installers in many areas. For closet systems and complex installations, professional installation is included in select markets. Contact us to learn about installation services in your area.',
+    answer: 'We can recommend qualified installers in many areas. For complex installations, professional installation is included in select markets. Contact us to learn about installation services in your area.',
     category: 'Installation',
   },
   {

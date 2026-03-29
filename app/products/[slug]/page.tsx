@@ -60,19 +60,8 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              {product.badge && (
-                <span className="inline-block bg-brand-green text-luxury-white px-3 py-1 text-xs font-medium tracking-wide mb-4">
-                  {product.badge}
-                </span>
-              )}
               <h1 className="font-heading text-4xl md:text-5xl text-charcoal mb-4">{product.name}</h1>
               <p className="text-sm text-muted-taupe mb-6">SKU: {product.sku}</p>
-              
-              {product.priceOnRequest ? (
-                <p className="text-2xl font-medium text-charcoal mb-8">Request Pricing</p>
-              ) : (
-                <p className="text-3xl font-medium text-charcoal mb-8">${product.price?.toLocaleString()}</p>
-              )}
 
               <p className="text-muted-taupe text-lg leading-relaxed mb-8">{product.description}</p>
 

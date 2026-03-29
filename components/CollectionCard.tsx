@@ -18,6 +18,13 @@ export default function CollectionCard({ collection }: CollectionCardProps) {
         transition={{ duration: 0.3 }}
       >
         <div className="aspect-[16/10] relative overflow-hidden bg-stone-gray">
+          <Image 
+            src={collection.image} 
+            alt={collection.name}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent z-10" />
           <div className="absolute inset-0 bg-charcoal opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-10" />
         </div>
