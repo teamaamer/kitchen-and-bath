@@ -35,10 +35,10 @@ export default function HeroSection() {
           className="max-w-5xl"
         >
           <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl text-luxury-white mb-8 leading-tight">
-            Custom Kitchen & Bath<br />Solutions
+            Custom Kitchen & Bath Solutions
           </h1>
           <p className="text-stone-gray text-lg md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
-            From framed and flat-door cabinetry to premium countertops, vanities, and LED lighting—we bring your vision to life with exceptional craftsmanship and personalized service.
+            From framed and flat-door cabinetry to premium countertops, vanities, and LED lighting, KBS brings your vision to life with exceptional craftsmanship and personalized service.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/categories">
@@ -51,7 +51,15 @@ export default function HeroSection() {
                 Request Quote
               </Button>
             </Link>
+            <Link href="/offers">
+              <Button variant="primary" size="lg" className="bg-soft-gold hover:bg-soft-gold/90 text-charcoal border-0">
+                View Exclusive Offers
+              </Button>
+            </Link>
           </div>
+          <p className="text-stone-gray text-sm mt-6 font-medium">
+            ✨ Limited-time promotions on premium products
+          </p>
         </motion.div>
       </div>
 

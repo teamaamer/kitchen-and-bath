@@ -39,13 +39,25 @@ export default function OffersPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-luxury-white overflow-hidden group"
               >
-                <div className="aspect-[4/3] relative overflow-hidden bg-stone-gray">
-                  <Image
-                    src={offer.image}
-                    alt={offer.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+                <div className="relative h-[400px] overflow-hidden bg-stone-gray/10">
+                  {offer.mediaType === 'image' ? (
+                    <Image
+                      src={offer.mediaSrc}
+                      alt={offer.title}
+                      fill
+                      className="object-contain group-hover:scale-105 transition-transform duration-500"
+                    />
+                  ) : (
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="w-full h-full object-contain"
+                    >
+                      <source src={offer.mediaSrc} type="video/mp4" />
+                    </video>
+                  )}
                 </div>
                 <div className="p-8">
                   <h2 className="font-heading text-3xl text-charcoal mb-3">

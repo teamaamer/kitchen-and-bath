@@ -7,8 +7,8 @@ import SectionIntro from '@/components/SectionIntro'
 const features = [
   {
     icon: Award,
-    title: 'Premium Craftsmanship',
-    description: 'Every piece is crafted with meticulous attention to detail using the finest materials.',
+    title: 'Premium Quality',
+    description: 'Every product is selected for its craftsmanship, durability, and refined finish.',
   },
   {
     icon: Sparkles,
@@ -17,18 +17,13 @@ const features = [
   },
   {
     icon: Shield,
-    title: 'Lifetime Warranty',
-    description: 'We stand behind our quality with comprehensive warranty coverage.',
-  },
-  {
-    icon: Truck,
-    title: 'White Glove Service',
-    description: 'Professional delivery and installation support for a seamless experience.',
+    title: 'Trusted Brands',
+    description: 'We partner with established manufacturers known for quality and reliability.',
   },
   {
     icon: Users,
     title: 'Design Consultation',
-    description: 'Expert guidance to help you create the perfect space.',
+    description: 'Expert guidance to help you select the right products for your space.',
   },
 ]
 
@@ -38,11 +33,11 @@ export default function WhyKBS() {
       <div className="container mx-auto px-4 lg:px-8">
         <SectionIntro
           label="Why Choose KBS"
-          title="Uncompromising Quality & Service"
-          description="We are committed to excellence in every aspect of our business, from design to delivery."
+          title="Quality, Design, and Expertise"
+          description="We bring together premium products, trusted brands, and personalized guidance to help you create exceptional spaces."
         />
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}

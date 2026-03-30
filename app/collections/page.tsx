@@ -16,10 +16,10 @@ export default function CollectionsPage() {
             className="max-w-4xl mx-auto text-center"
           >
             <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl mb-6">
-              Curated Collections
+              Portfolio
             </h1>
             <p className="text-stone-gray text-xl leading-relaxed">
-              Thoughtfully assembled collections that bring cohesion and elegance to your space. Each collection represents a distinct aesthetic vision.
+              Explore our curated design collections showcasing premium kitchen and bath solutions. Each collection represents a distinct aesthetic vision and style approach.
             </p>
           </motion.div>
         </div>

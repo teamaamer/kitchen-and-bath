@@ -26,10 +26,6 @@ export const mainNavigation: NavLink[] = [
     href: '/brands',
   },
   {
-    label: 'Inspiration',
-    href: '/inspiration',
-  },
-  {
     label: 'Offers',
     href: '/offers',
   },
@@ -51,7 +47,6 @@ export const footerLinks = {
   company: [
     { label: 'About Us', href: '/about' },
     { label: 'Brands', href: '/brands' },
-    { label: 'Inspiration', href: '/inspiration' },
     { label: 'Special Offers', href: '/offers' },
     { label: 'Contact', href: '/contact' },
   ],
@@ -60,5 +55,9 @@ export const footerLinks = {
     { label: 'Design Consultation', href: '/contact#consultation' },
     { label: 'Installation Support', href: '/contact#installation' },
     { label: 'Warranty Information', href: '/about#warranty' },
+  ],
+  legal: [
+    { label: 'Privacy Policy', href: '/privacy' },
+    { label: 'Terms of Service', href: '/terms' },
   ],
 }

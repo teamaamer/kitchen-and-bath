@@ -9,23 +9,23 @@ export default function AboutPage() {
   const values = [
     {
       icon: Award,
-      title: 'Excellence',
-      description: 'We pursue perfection in every detail, from material selection to final installation.',
+      title: 'Craftsmanship',
+      description: 'Every product is selected for its quality, durability, and refined finish.',
     },
     {
       icon: Target,
       title: 'Precision',
-      description: 'Architectural rigor and engineering excellence guide our design process.',
+      description: 'Attention to detail in every specification, installation, and design element.',
     },
     {
       icon: Heart,
-      title: 'Passion',
-      description: 'We love what we do, and it shows in the quality of our work.',
+      title: 'Quality',
+      description: 'Premium materials and trusted manufacturing ensure long-lasting results.',
     },
     {
       icon: Users,
       title: 'Partnership',
-      description: 'We collaborate closely with designers, architects, and homeowners to bring visions to life.',
+      description: 'We work closely with homeowners, designers, and project partners to deliver tailored solutions.',
     },
   ]
 
@@ -40,10 +40,10 @@ export default function AboutPage() {
             className="max-w-4xl mx-auto text-center"
           >
             <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl mb-6">
-              Crafting Spaces of Distinction
+              About KBS
             </h1>
             <p className="text-stone-gray text-xl leading-relaxed">
-              KBS has been at the forefront of luxury kitchen and bath design, creating products that blend timeless elegance with modern innovation.
+              KBS brings together premium kitchen and bath products with timeless design, modern functionality, and attention to detail.
             </p>
           </motion.div>
         </div>
@@ -80,16 +80,16 @@ export default function AboutPage() {
                 Our Story
               </p>
               <h2 className="font-heading text-4xl md:text-5xl text-charcoal mb-6">
-                Born from a passion for exceptional design
+                Designed to bring beauty and function into everyday spaces
               </h2>
               <p className="text-muted-taupe text-lg leading-relaxed mb-6">
-                KBS was founded on the belief that the spaces we inhabit should inspire us daily. What began as a small workshop dedicated to custom vanities has grown into a comprehensive luxury brand serving designers, architects, and discerning homeowners across the country.
+                KBS specializes in premium kitchen and bath solutions designed to combine elegance, functionality, and long-lasting quality. From framed and flat-door cabinetry to countertops, vanities, LED mirrors, and medicine cabinets, every detail is selected with care to create spaces that feel refined and personal.
               </p>
               <p className="text-muted-taupe text-lg leading-relaxed mb-6">
-                Every product we create is the result of careful consideration, expert craftsmanship, and an unwavering commitment to quality. We source premium materials, work with skilled artisans, and employ rigorous quality control to ensure that each piece meets our exacting standards.
+                We work closely with homeowners, designers, and project partners to deliver tailored solutions that reflect each client's style, needs, and vision. Our focus is not only on beautiful results, but on creating spaces that feel thoughtfully designed and built to last.
               </p>
               <p className="text-muted-taupe text-lg leading-relaxed">
-                Today, KBS continues to push the boundaries of what's possible in kitchen and bath design, introducing innovative products that set new standards for beauty, functionality, and durability.
+                Every product we offer is chosen for its quality, craftsmanship, and ability to support the kind of spaces that elevate daily living.
               </p>
             </motion.div>
           </div>
@@ -101,7 +101,7 @@ export default function AboutPage() {
           <SectionIntro
             label="Visit Us"
             title="Inside Our Showroom"
-            description="Experience our curated collection of kitchen and bath products in person."
+            description="A look at our craftsmanship and the premium products we offer."
           />
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">

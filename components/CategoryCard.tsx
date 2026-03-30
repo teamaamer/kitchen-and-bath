@@ -24,15 +24,16 @@ export default function CategoryCard({ category }: CategoryCardProps) {
             alt={category.name}
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-500"
-            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 16vw"
+            quality={95}
           />
-          <div className="absolute inset-0 bg-charcoal opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+          <div className="absolute inset-0 bg-charcoal opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
         </div>
-        <div className="p-6">
-          <h3 className="font-heading text-2xl mb-2 text-charcoal group-hover:text-brand-green transition-colors">
+        <div className="p-4">
+          <h3 className="font-heading text-xl font-semibold mb-2 text-charcoal group-hover:text-brand-green transition-colors leading-tight">
             {category.name}
           </h3>
-          <p className="text-muted-taupe text-sm mb-4 line-clamp-2">{category.description}</p>
+          <p className="text-muted-taupe text-sm font-medium leading-relaxed mb-3 line-clamp-2">{category.description}</p>
           <div className="flex items-center justify-end">
             <ArrowRight className="w-5 h-5 text-brand-green transform group-hover:translate-x-1 transition-transform" />
           </div>

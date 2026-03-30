@@ -14,10 +14,10 @@ export default function FeaturedCategories() {
         <SectionIntro
           label="Our Products"
           title="Browse Our Product Categories"
-          description="Explore our comprehensive range of kitchen and bath solutions—from custom cabinetry and premium countertops to elegant vanities and innovative LED lighting systems."
+          description="Explore premium kitchen and bath product families designed to combine beauty, functionality, and craftsmanship."
         />
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-16">
           {featuredCategories.map((category, index) => (
             <motion.div
               key={category.id}
