@@ -8,13 +8,36 @@
   }
 
   body {
-    @apply bg-warm-ivory text-charcoal font-body font-normal leading-relaxed;
+    @apply bg-warm-ivory text-charcoal font-montserrat font-normal leading-relaxed;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-normal leading-tight text-charcoal;
+  /* Premium Typography System - Montserrat */
+  h1 {
+    @apply font-montserrat font-extrabold tracking-tight-heading leading-tight text-charcoal;
+  }
+
+  h2 {
+    @apply font-montserrat font-extrabold tracking-tight-heading leading-tight text-charcoal;
+  }
+
+  h3 {
+    @apply font-montserrat font-extrabold tracking-tight-heading leading-tight text-charcoal;
+  }
+
+  h4, h5, h6 {
+    @apply font-montserrat font-semibold leading-tight text-charcoal;
+  }
+
+  /* Body text */
+  p {
+    @apply font-montserrat font-normal leading-relaxed;
+  }
+
+  /* Small text / captions */
+  small, .text-sm {
+    @apply font-montserrat font-light;
   }
 }
 

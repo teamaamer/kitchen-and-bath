@@ -1,19 +1,14 @@
 import type { Metadata } from "next";
-import { Cormorant, Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const cormorant = Cormorant({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-heading",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-body",
+  weight: ["300", "400", "600", "800"],
+  variable: "--font-montserrat",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -33,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${inter.variable} antialiased`}>
+    <html lang="en" className={`${montserrat.variable} antialiased`}>
       <body className="min-h-screen flex flex-col bg-warm-ivory">
         <Header />
         <main className="flex-1">{children}</main>

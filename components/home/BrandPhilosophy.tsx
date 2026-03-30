@@ -1,6 +1,30 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, useInView, useMotionValue, useSpring } from 'framer-motion'
+import { useEffect, useRef } from 'react'
+
+function AnimatedCounter({ value, suffix = '' }: { value: number; suffix?: string }) {
+  const ref = useRef<HTMLParagraphElement>(null)
+  const motionValue = useMotionValue(0)
+  const springValue = useSpring(motionValue, { duration: 3000 })
+  const isInView = useInView(ref, { once: true, margin: '-100px' })
+
+  useEffect(() => {
+    if (isInView) {
+      motionValue.set(value)
+    }
+  }, [motionValue, isInView, value])
+
+  useEffect(() => {
+    springValue.on('change', (latest) => {
+      if (ref.current) {
+        ref.current.textContent = Math.floor(latest).toLocaleString() + suffix
+      }
+    })
+  }, [springValue, suffix])
+
+  return <p ref={ref} className="font-heading text-7xl md:text-8xl font-extrabold text-charcoal mb-3">0{suffix}</p>
+}
 
 export default function BrandPhilosophy() {
   return (
@@ -42,15 +66,15 @@ export default function BrandPhilosophy() {
             </p>
             <div className="grid grid-cols-3 gap-12 pt-8 border-t border-stone-gray/30">
               <div>
-                <p className="font-heading text-5xl text-charcoal mb-3">15+</p>
+                <AnimatedCounter value={15} suffix="+" />
                 <p className="text-base text-muted-taupe">Years of Excellence</p>
               </div>
               <div>
-                <p className="font-heading text-5xl text-charcoal mb-3">500+</p>
+                <AnimatedCounter value={500} suffix="+" />
                 <p className="text-base text-muted-taupe">Projects Completed</p>
               </div>
               <div>
-                <p className="font-heading text-5xl text-charcoal mb-3">98%</p>
+                <AnimatedCounter value={98} suffix="%" />
                 <p className="text-base text-muted-taupe">Client Satisfaction</p>
               </div>
             </div>

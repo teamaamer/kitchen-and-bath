@@ -16,10 +16,10 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center space-x-3">
             <div className="w-12 h-12 bg-brand-green flex items-center justify-center">
-              <span className="text-luxury-white font-bold text-xl font-heading">KBS</span>
+              <span className="text-luxury-white font-extrabold text-xl font-montserrat tracking-[0.125em]">KBS</span>
             </div>
             <div className="hidden sm:block">
-              <div className="text-sm font-heading text-charcoal tracking-wider">
+              <div className="text-xs font-montserrat font-light text-charcoal tracking-logo uppercase">
                 KITCHEN & BATH SOCIETY
               </div>
             </div>

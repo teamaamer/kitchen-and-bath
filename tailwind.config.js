@@ -19,8 +19,14 @@ module.exports = {
         'soft-gold': '#C8A96B',
       },
       fontFamily: {
-        heading: ['var(--font-heading)', 'serif'],
-        body: ['var(--font-body)', 'sans-serif'],
+        montserrat: ['var(--font-montserrat)', 'sans-serif'],
+        heading: ['var(--font-montserrat)', 'sans-serif'],
+        body: ['var(--font-montserrat)', 'sans-serif'],
+      },
+      letterSpacing: {
+        'luxury': '0.06em',
+        'logo': '0.125em',
+        'tight-heading': '-0.01em',
       },
       animation: {
         'scroll-slow': 'scroll 60s linear infinite',

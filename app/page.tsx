@@ -4,7 +4,7 @@ import FeaturedCategories from '@/components/home/FeaturedCategories'
 import BrandPhilosophy from '@/components/home/BrandPhilosophy'
 import WhyKBS from '@/components/home/WhyKBS'
 import BrowseByStyle from '@/components/home/BrowseByStyle'
-import OffersSection from '@/components/home/OffersSection'
+import FacebookOffersSection from '@/components/home/FacebookOffersSection'
 import FacebookFeed from '@/components/home/FacebookFeed'
 import ConsultationCTA from '@/components/home/ConsultationCTA'
 
@@ -17,7 +17,7 @@ export default function Home() {
       <BrandPhilosophy />
       <WhyKBS />
       <BrowseByStyle />
-      <OffersSection />
+      <FacebookOffersSection />
       <FacebookFeed />
       <ConsultationCTA />
     </>

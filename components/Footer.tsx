@@ -10,7 +10,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-12 h-12 bg-brand-green flex items-center justify-center">
-                <span className="text-luxury-white font-bold text-xl font-heading">KBS</span>
+                <span className="text-luxury-white font-extrabold text-xl font-montserrat tracking-[0.125em]">KBS</span>
               </div>
             </div>
             <p className="text-stone-gray text-sm leading-relaxed mb-6">
