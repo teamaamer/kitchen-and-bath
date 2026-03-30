@@ -34,13 +34,25 @@ export default function OffersMarquee() {
               className="flex-shrink-0 mx-4 w-[400px] md:w-[500px]"
             >
               <div className="relative h-[350px] overflow-hidden bg-charcoal">
-                <Image
-                  src={offer.image}
-                  alt={offer.title}
-                  fill
-                  className="object-contain"
-                  sizes="500px"
-                />
+                {offer.mediaType === 'image' ? (
+                  <Image
+                    src={offer.mediaSrc}
+                    alt={offer.title}
+                    fill
+                    className="object-contain"
+                    sizes="500px"
+                  />
+                ) : (
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-full object-contain"
+                  >
+                    <source src={offer.mediaSrc} type="video/mp4" />
+                  </video>
+                )}
               </div>
             </div>
           ))}
@@ -51,13 +63,25 @@ export default function OffersMarquee() {
               className="flex-shrink-0 mx-4 w-[400px] md:w-[500px]"
             >
               <div className="relative h-[350px] overflow-hidden bg-charcoal">
-                <Image
-                  src={offer.image}
-                  alt={offer.title}
-                  fill
-                  className="object-contain"
-                  sizes="500px"
-                />
+                {offer.mediaType === 'image' ? (
+                  <Image
+                    src={offer.mediaSrc}
+                    alt={offer.title}
+                    fill
+                    className="object-contain"
+                    sizes="500px"
+                  />
+                ) : (
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-full object-contain"
+                  >
+                    <source src={offer.mediaSrc} type="video/mp4" />
+                  </video>
+                )}
               </div>
             </div>
           ))}
