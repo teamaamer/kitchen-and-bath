@@ -94,14 +94,26 @@ export default function SpecialOffersSlider() {
                 className="absolute w-full h-full"
               >
                 <div className="relative w-full h-full bg-stone-gray/10 overflow-hidden group">
-                  <Image
-                    src={featuredOffers[currentIndex].image}
-                    alt={featuredOffers[currentIndex].title}
-                    fill
-                    className="object-contain"
-                    priority
-                    sizes="(max-width: 768px) 100vw, 90vw"
-                  />
+                  {featuredOffers[currentIndex].mediaType === 'image' ? (
+                    <Image
+                      src={featuredOffers[currentIndex].mediaSrc}
+                      alt={featuredOffers[currentIndex].title}
+                      fill
+                      className="object-contain"
+                      priority
+                      sizes="(max-width: 768px) 100vw, 90vw"
+                    />
+                  ) : (
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="w-full h-full object-contain"
+                    >
+                      <source src={featuredOffers[currentIndex].mediaSrc} type="video/mp4" />
+                    </video>
+                  )}
                 </div>
               </motion.div>
             </AnimatePresence>

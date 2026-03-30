@@ -30,12 +30,24 @@ export default function SpecialOffers() {
               className="bg-luxury-white overflow-hidden group"
             >
               <div className="aspect-[4/3] relative overflow-hidden bg-stone-gray">
-                <Image
-                  src={offer.image}
-                  alt={offer.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                {offer.mediaType === 'image' ? (
+                  <Image
+                    src={offer.mediaSrc}
+                    alt={offer.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                ) : (
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  >
+                    <source src={offer.mediaSrc} type="video/mp4" />
+                  </video>
+                )}
               </div>
               <div className="p-6">
                 <h3 className="font-heading text-2xl text-charcoal mb-2">
