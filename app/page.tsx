@@ -12,14 +12,14 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <BrandCarousel />
       <FeaturedCategories />
+      <BrowseByStyle />
       <BrandPhilosophy />
       <WhyKBS />
-      <BrowseByStyle />
       <FacebookOffersSection />
       <FacebookFeed />
       <ConsultationCTA />
+      <BrandCarousel />
     </>
   )
 }

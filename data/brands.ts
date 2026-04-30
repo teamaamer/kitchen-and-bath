@@ -26,11 +26,6 @@ export const brands: Brand[] = [
     logo: '/Brandslogos/logo4b.png',
   },
   {
-    id: 'brand-5',
-    name: 'Brand Partner 5',
-    logo: '/Brandslogos/logo5b.png',
-  },
-  {
     id: 'brand-6',
     name: 'Brand Partner 6',
     logo: '/Brandslogos/logo6b-removebg-preview.png',
